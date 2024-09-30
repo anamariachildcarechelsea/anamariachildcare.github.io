@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Nuestro Equipo - Ana Marias’s Family Child Care</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Inicio</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Acerca de nosotros</a></li>
+                <li><a href="generic.html">Curriculum</a></li>
+                <li class="active"><a href="equipo.html">Nuestro Equipo</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <header class="major">
+                    <h1>Nuestro Equipo</h1>
+                </header>
+
+                <p>Nuestro staff es altamente calificado y dedicado al desarrollo de los niños. En primera instancia, contamos con la credencial CDA otorgada por el Council for Professional Recognition en Washington D.C. a través del programa Child Development Associate.</p>
+
+                <h2>Educadores Destacados</h2>
+				<img src="images/julio.png" alt="Julio Cesar Bernal, educador con credenciales en Educación Infantil" style="width: 200px; height: auto;" />
+                <div class="team-member">
+                    <h3>Julio Cesar Bernal</h3>
+                    <p>Educador con estudios universitarios de Certificate Degree y Associate Degree en Educación Infantil en el Urban College of Boston. Su compromiso con el aprendizaje y el desarrollo infantil es ejemplar.</p>
+                </div>
+				<div class="team-member">
+                    <h3>Maria Bernal</h3>
+                    <p>Educadora con Bachelor Degree en Educación Infantil en el Endicott College. Actualmente, cursa un Master Degree en Educación Infantil en Worcester State University. Su pasión por la enseñanza y su dedicación al bienestar de los niños son inspiradoras.</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section>
+                <form onsubmit="sendEmail(); return false;">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="message">Mensaje</label>
+                            <textarea name="message" id="message" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Enviar Mensaje" /></li>
+                    </ul>
+                </form>
+            </section>
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Dirección</h3>
+                    <p>50 Congress Avenue #1<br />
+                        Chelsea, MA 02150</p>
+                </section>
+                <section>
+                    <h3>Teléfono</h3>
+                    <p><a href="#">+1 (000) 617-9910916</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">leito114@gmail.com <br />
+                        anamariachildcenter@outlook.com</a></p>
+                </section>
+                <section>
+                    <h3>Redes Sociales</h3>
+                    <ul class="icons alt">
+                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = encodeURIComponent(`Nuevo mensaje de ${name}`);
+            const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\nMensaje:\n${message}`);
+
+            window.location.href = `mailto:anamariachildcenter@outlook.com; leito114@gmail.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+
+</body>
+</html>
