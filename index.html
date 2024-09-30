@@ -63,6 +63,28 @@
 							<div class="image main"><img src="images/chd1.jpg" alt="" /></div>
 							</article>
 
+							<!-- Galería de imágenes -->
+							<h2>Galería</h2>
+							<div class="carousel" style="position: relative; overflow: hidden; width: 100%; max-width: 800px; margin: 20px auto;">
+								<div class="carousel-images" style="display: flex; transition: transform 0.5s; width: 100%;">
+									<img src="images/g.jpg" alt="Foto 1" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g1.jpg" alt="Foto 2" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g2.jpg" alt="Foto 3" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g3.jpg" alt="Foto 4" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g4.jpg" alt="Foto 5" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g5.jpg" alt="Foto 6" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g6.jpg" alt="Foto 7" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g8.jpg" alt="Foto 8" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g9.jpg" alt="Foto 9" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g10.jpg" alt="Foto 10" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g11.jpg" alt="Foto 11" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+									<img src="images/g12.jpg" alt="Foto 12" style="flex: 0 0 100%; height: 700px; object-fit: cover;" />
+								</div>
+								<button class="prev" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; padding: 10px; cursor: pointer;">&#10094;</button>
+								<button class="next" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; padding: 10px; cursor: pointer;">&#10095;</button>
+							</div>
+
+
 					
 
 					</div>
@@ -144,6 +166,43 @@
 					window.location.href = `mailto:anamariachildcenter@outlook.com; leito114@gmail.com?subject=${subject}&body=${body}`;
 				}
 			</script>
+			<script>
+				const images = document.querySelector('.carousel-images');
+				const prevButton = document.querySelector('.prev');
+				const nextButton = document.querySelector('.next');
+			
+				let currentIndex = 0;
+			
+				function showImage(index) {
+					const totalImages = images.children.length;
+					if (index < 0) {
+						currentIndex = totalImages - 1; // Muestra la última imagen
+					} else if (index >= totalImages) {
+						currentIndex = 0; // Vuelve a la primera imagen
+					} else {
+						currentIndex = index;
+					}
+					const offset = -currentIndex * 100; // Mueve el carrusel
+					images.style.transform = `translateX(${offset}%)`;
+				}
+			
+				nextButton.addEventListener('click', () => {
+					showImage(currentIndex + 1);
+				});
+			
+				prevButton.addEventListener('click', () => {
+					showImage(currentIndex - 1);
+				});
+			
+				// Cambio automático de imagen cada 3 segundos
+				setInterval(() => {
+					showImage(currentIndex + 1);
+				}, 3000);
+			</script>
+			
+			
+			
+			
 
 	</body>
 </html>
